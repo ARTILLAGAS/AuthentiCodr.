@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthentiCodr.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <div class="mode_toggle" id="mode_toggle">
+            <span class="toggle_icon">☀️</span>
+            <span class="toggle_icon">🌙</span>
+        </div>
+        
+        <div class="auth_container" id="auth_container">
+            <h1 class="logo">AuthentiCodr./</h1>
+            
+            <!-- Login Form -->
+            <div class="glassmorphism" id="login_section">
+                <form class="login_form" id="login_form">
+                    <div class="input_group">
+                        <input type="email" class="input_field" id="email_input" placeholder=" " required>
+                        <label for="email_input" class="input_label">Email</label>
+                    </div>
+                    <div class="input_group">
+                        <input type="password" class="input_field" id="password_input" placeholder=" " required>
+                        <label for="password_input" class="input_label">Password</label>
+                    </div>
+                    <button type="submit" class="login_button" id="login_button">
+                        <span>Sign In</span>
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Auth Codes Section (Hidden by default) -->
+            <div class="glassmorphism auth_codes" id="auth_codes_section">
+                <div class="code_card">
+                    <div class="code_info">
+                        <span class="code_service">Apple iCloud</span>
+                        <span class="code_account">john.doe@icloud.com</span>
+                    </div>
+                    <div class="code_area">
+                        <span class="code_digits">123 456</span>
+                        <div class="timer">30</div>
+                    </div>
+                </div>
+                
+                <div class="code_card">
+                    <div class="code_info">
+                        <span class="code_service">Google</span>
+                        <span class="code_account">john.doe@gmail.com</span>
+                    </div>
+                    <div class="code_area">
+                        <span class="code_digits">789 012</span>
+                        <div class="timer">30</div>
+                    </div>
+                </div>
+                
+                <div class="code_card">
+                    <div class="code_info">
+                        <span class="code_service">GitHub</span>
+                        <span class="code_account">johndoe</span>
+                    </div>
+                    <div class="code_area">
+                        <span class="code_digits">345 678</span>
+                        <div class="timer">30</div>
+                    </div>
+                </div>
+                
+                <button class="add_button" id="add_button">+</button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2025 iAuthenticator. All rights reserved.
+        </div>
+    </div>
+    
+    <!-- Add Account Modal -->
+    <div class="modal" id="add_account_modal">
+        <div class="modal_content">
+            <div class="modal_header">
+                <h2 class="modal_title">Add Account</h2>
+                <button class="close_button" id="close_modal">&times;</button>
+            </div>
+            
+            <div class="qr_container">
+                <div class="qr_code">
+                    <!-- Placeholder for QR code -->
+                    <svg width="180" height="180" viewBox="0 0 180 180">
+                        <rect width="180" height="180" fill="#fff"/>
+                        <g fill="#000">
+                            <!-- QR code pattern - simplified version -->
+                            <rect x="20" y="20" width="40" height="40"/>
+                            <rect x="120" y="20" width="40" height="40"/>
+                            <rect x="20" y="120" width="40" height="40"/>
+                            <rect x="70" y="70" width="40" height="40"/>
+                            <rect x="30" y="30" width="20" height="20" fill="#fff"/>
+                            <rect x="130" y="30" width="20" height="20" fill="#fff"/>
+                            <rect x="30" y="130" width="20" height="20" fill="#fff"/>
+                            <!-- More QR code elements -->
+                            <rect x="70" y="20" width="10" height="10"/>
+                            <rect x="90" y="20" width="10" height="10"/>
+                            <rect x="20" y="70" width="10" height="10"/>
+                            <rect x="20" y="90" width="10" height="10"/>
+                            <rect x="120" y="70" width="10" height="10"/>
+                            <rect x="140" y="70" width="10" height="10"/>
+                            <rect x="70" y="120" width="10" height="10"/>
+                            <rect x="90" y="120" width="10" height="10"/>
+                            <rect x="120" y="90" width="10" height="10"/>
+                            <rect x="140" y="90" width="10" height="10"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            
+            <p class="manual_entry">
+                Can't scan the QR code? Enter this setup key manually:
+            </p>
+            <div class="setup_key">JBSWY3DPEHPK3PXP</div>
+            
+            <form class="add_account_form" id="add_account_form">
+                <div class="input_group">
+                    <input type="text" class="input_field" id="service_input" placeholder=" " required>
+                    <label for="service_input" class="input_label">Service Name</label>
+                </div>
+                <div class="input_group">
+                    <input type="text" class="input_field" id="account_input" placeholder=" " required>
+                    <label for="account_input" class="input_label">Account or Email</label>
+                </div>
+                <div class="input_group">
+                    <input type="text" class="input_field" id="key_input" placeholder=" " required>
+                    <label for="key_input" class="input_label">Setup Key</label>
+                </div>
+                <button type="submit" class="add_account_button">Add Account</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Notification -->
+    <div class="notification" id="notification">Account added successfully!</div>
+    <script src="script.js"></script>
+</body>
+</html>
