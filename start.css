@@ -40,6 +40,7 @@ body {
         color var(--transition-duration) var(--transition-timing);
 }
 
+/* Welcome Screen Styles */
 .welcome-container {
     display: flex;
     justify-content: center;
@@ -66,6 +67,7 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 100;
 }
 
 .switch {
@@ -203,6 +205,92 @@ input:checked + .slider:before {
     transform: translateY(-2px);
 }
 
+/* Auth Screen Styles */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    transition: background-color var(--transition-duration) var(--transition-timing), box-shadow var(--transition-duration) var(--transition-timing);
+}
+
+.auth-card h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: var(--text-color);
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity var(--transition-duration) var(--transition-timing), color var(--transition-duration) var(--transition-timing);
+}
+
+.tab-btn.active {
+    opacity: 1;
+    border-bottom: 2px solid var(--blue);
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 16px;
+    transition: border-color var(--transition-duration) var(--transition-timing), background-color var(--transition-duration) var(--transition-timing);
+}
+
+.form-group input:focus {
+    border-color: var(--blue);
+    outline: none;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .welcome-card {
         padding: 30px;
@@ -210,6 +298,14 @@ input:checked + .slider:before {
     
     .welcome-card h1 {
         font-size: 36px;
+    }
+    
+    .auth-card {
+        padding: 25px 20px;
+    }
+    
+    .auth-card h1 {
+        font-size: 28px;
     }
 }
 
@@ -224,5 +320,19 @@ input:checked + .slider:before {
     
     .welcome-message h2 {
         font-size: 20px;
+    }
+    
+    .switch {
+        width: 50px;
+        height: 28px;
+    }
+    
+    .slider:before {
+        height: 20px;
+        width: 20px;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(22px);
     }
 }
