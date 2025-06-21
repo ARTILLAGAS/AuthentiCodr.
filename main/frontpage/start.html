@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthentiCodr. | Super-Secure Web Authenticator</title>
+    <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="signinmodal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <span>A</span>uthentiCodr<span class="dot">.</span>
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="menu">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li class="login-btn"><a href="#" id="loginBtnHeader">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>The World's First <span>Super-Secure</span> Web Authenticator</h1>
+                <p>Protect your digital life with military-grade encryption and zero-knowledge architecture. No compromises on security.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn primary" id="getStartedBtn">Get Started</a>
+                    <a href="#" class="btn secondary">Watch Demo</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="card-wrapper">
+                    <div class="authenticator-card">
+                        <div class="auth-header">
+                            <div class="auth-logo">
+                                <span>A</span>
+                            </div>
+                            <h3>AuthentiCodr<span class="dot">.</span></h3>
+                        </div>
+                        <div class="auth-code">
+                            <span>8</span>
+                            <span>4</span>
+                            <span>2</span>
+                            <span>9</span>
+                            <span>1</span>
+                            <span>7</span>
+                        </div>
+                        <div class="auth-timer">
+                            <div class="timer-bar"></div>
+                            <div class="timer-text">23s remaining</div>
+                        </div>
+                        <div class="auth-actions">
+                            <button><i class="fas fa-copy"></i> Copy Code</button>
+                            <button><i class="fas fa-sync-alt"></i> Refresh</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Unmatched Security Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Military-Grade Encryption</h3>
+                    <p>AES-256 encryption with zero-knowledge architecture ensures your data remains inaccessible to anyone but you.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3>Biometric Authentication</h3>
+                    <p>Secure access with fingerprint, facial recognition, or hardware security keys for maximum protection.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud-Synced Security</h3>
+                    <p>Access your authenticator codes from any device without compromising security.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Backup & Recovery</h3>
+                    <p>Secure recovery options ensure you never lose access to your accounts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <h3>Phishing Protection</h3>
+                    <p>Advanced algorithms detect and prevent phishing attempts in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Cross-Platform</h3>
+                    <p>Works seamlessly on all your devices - desktop, mobile, and tablet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="security" id="security">
+        <div class="container">
+            <div class="security-content">
+                <h2>How We Protect You</h2>
+                <p>AuthentiCodr. uses cutting-edge security technologies to ensure your digital safety:</p>
+                <ul class="security-list">
+                    <li>
+                        <i class="fas fa-lock"></i>
+                        <div>
+                            <strong>End-to-End Encryption</strong>
+                            <p>All data is encrypted before it leaves your device.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-user-secret"></i>
+                        <div>
+                            <strong>Zero-Knowledge Architecture</strong>
+                            <p>We never have access to your secrets or encryption keys.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-code-branch"></i>
+                        <div>
+                            <strong>Blockchain-Verified Security</strong>
+                            <p>Tamper-proof security logs using distributed ledger technology.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="security-visual">
+                <div class="security-layers">
+                    <div class="layer">
+                        <div class="layer-icon"><i class="fas fa-user"></i></div>
+                        <div class="layer-name">User</div>
+                    </div>
+                    <div class="layer">
+                        <div class="layer-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="layer-name">Device Encryption</div>
+                    </div>
+                    <div class="layer">
+                        <div class="layer-icon"><i class="fas fa-cloud"></i></div>
+                        <div class="layer-name">Secure Cloud</div>
+                    </div>
+                    <div class="layer">
+                        <div class="layer-icon"><i class="fas fa-server"></i></div>
+                        <div class="layer-name">Zero-Knowledge Server</div>
+                    </div>
+                    <div class="layer">
+                        <div class="layer-icon"><i class="fas fa-globe"></i></div>
+                        <div class="layer-name">Online Services</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How AuthentiCodr. Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Set Up Your Account</h3>
+                    <p>Create your secure account with biometric verification.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Add Your Services</h3>
+                    <p>Scan QR codes or manually enter your authentication details.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Generate Secure Codes</h3>
+                    <p>Get time-based codes whenever you need to log in.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Access Anywhere</h3>
+                    <p>Use your codes on any device with secure cloud sync.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <!-- Update the CTA section -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Secure Your Digital Life?</h2>
+        <p>Join millions of users who trust AuthentiCodr. for their security needs.</p>
+        <a href="#" class="btn primary" id="ctaGetStarted">Get Started for Free</a>
+    </div>
+</section>
+    <!-- Auth Modals -->
+    <div class="auth-modal" id="loginModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+        </div>
+        <div class="modal-scrollable">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginIdentifier">Email or Phone</label>
+                    <input type="text" id="loginIdentifier" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn primary">Login</button>
+            </form>
+        </div>
+        <p class="modal-footer">
+            Don't have an account? <a href="#" id="showSignup">Sign Up</a>
+        </p>
+    </div>
+</div>
+
+    <div class="auth-modal" id="signupModal">
+    <!-- Close button moved outside modal-content -->
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Create an Account</h2>
+        </div>
+        <div class="modal-scrollable">
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+            
+                <div class="identifier-toggle">
+                    <button type="button" class="toggle-btn active" data-type="email">Email</button>
+                    <button type="button" class="toggle-btn" data-type="phone">Phone</button>
+                </div>
+            
+                <div class="form-group identifier-group" id="emailGroup">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+
+                <div class="form-group identifier-group" id="phoneGroup" style="display: none;">
+                    <label for="signupPhone">Phone Number</label>
+                    <input type="tel" id="signupPhone" placeholder="e.g. +1 (555) 123-4567">
+                </div>
+            
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                    <div class="password-rules">
+                        <p>Password must contain:</p>
+                        <ul>
+                            <li id="rule-uppercase">At least 1 uppercase letter</li>
+                            <li id="rule-numbers">At least 3 numbers</li>
+                            <li id="rule-special">At least 2 special characters</li>
+                            <li id="rule-name">Not contain your name</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required>
+                </div>
+            
+                <div class="form-group">
+                    <label for="secretPassphrase">Secret Passphrase</label>
+                    <input type="text" id="secretPassphrase" required>
+                    <div class="passphrase-warning">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>This passphrase will be shown only once. Please copy and save it in a secure location. You'll need it to change your account details.</p>
+                    </div>
+                </div>
+            
+                <button type="submit" class="btn primary">Create Account</button>
+            </form>
+        </div>
+        <p class="modal-footer">
+            Already have an account? <a href="#" id="showLogin">Login</a>
+        </p>
+    </div>
+</div>
+
+    <div class="auth-modal" id="passphraseModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close-modal">&times;</span>
+            <h2>Secret Passphrase Confirmation</h2>
+        </div>
+        <div class="modal-scrollable">
+            <div class="passphrase-confirmation">
+                <i class="fas fa-shield-alt"></i>
+                <p>Your secret passphrase has been set. Please copy it now as it will not be shown again.</p>
+                <div class="passphrase-display">
+                    <span id="passphraseDisplay"></span>
+                    <button id="copyPassphrase" class="btn primary">
+                        <i class="fas fa-copy"></i> Copy to Clipboard
+                    </button>
+                </div>
+                <p class="warning-text">
+                    <i class="fas fa-exclamation-circle"></i> Store this passphrase in a secure location. You'll need it to change your account details.
+                </p>
+                <button id="confirmPassphrase" class="btn secondary">I've Saved My Passphrase</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add to your existing HTML file -->
+
+<!-- Code Verification Modal -->
+<div class="auth-modal" id="codeVerificationModal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Verify Your Identity</h2>
+        </div>
+        <div class="modal-scrollable">
+            <p>We've sent a verification code to your registered email/phone.</p>
+            
+            <form id="codeVerificationForm">
+                <div class="form-group">
+                    <label for="verificationCode">Verification Code</label>
+                    <input type="text" id="verificationCode" required placeholder="6-digit code">
+                </div>
+                
+                <div class="code-timer" id="codeTimer">
+                    Code expires in: <span id="timerValue">03:00</span>
+                </div>
+                
+                <div class="resend-link">
+                    <a href="#" id="resendCode">Resend Code</a>
+                </div>
+                
+                <button type="submit" class="btn primary">Verify</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Passphrase Verification Modal -->
+<div class="auth-modal" id="passphraseVerificationModal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Device Verification</h2>
+        </div>
+        <div class="modal-scrollable">
+            <div class="device-warning">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>This is a new device. For security, please enter your secret passphrase.</p>
+            </div>
+            
+            <form id="passphraseVerificationForm">
+                <div class="form-group">
+                    <label for="passphraseInput">Secret Passphrase</label>
+                    <input type="password" id="passphraseInput" required>
+                </div>
+                
+                <button type="submit" class="btn primary">Verify</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>AuthentiCodr<span class="dot">.</span></h3>
+                    <p>The world's first super-secure web-based authenticator with military-grade encryption.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support Center</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AuthentiCodr. All rights reserved. Designed with security in mind.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Security</a>
+                    <a href="#">Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="start.js"></script>
+    <script src="signin.js"></script>
+</body>
+</html>

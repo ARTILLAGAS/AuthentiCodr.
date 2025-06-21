@@ -1,0 +1,88 @@
+/* Security-specific styles */
+.attempts-warning {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.lockout-message {
+    background-color: #ffebee;
+    border-left: 4px solid #f44336;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.lockout-message i {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.device-warning {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Verification code input */
+.verification-code-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.verification-input {
+    width: 50px;
+    height: 60px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.verification-input:focus {
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* Timer display */
+.code-timer {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: 500;
+    color: #f44336;
+}
+
+/* Resend code link */
+.resend-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.resend-link a {
+    color: #2196f3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.resend-link a:hover {
+    text-decoration: underline;
+}
+
+.resend-link a.disabled {
+    color: #9e9e9e;
+    cursor: not-allowed;
+    text-decoration: none;
+}

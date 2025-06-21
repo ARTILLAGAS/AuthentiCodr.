@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthentiCodr. | Authenticator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        // Authentication check
+        if (localStorage.getItem('isAuthenticated') !== 'true') {
+            window.location.href = '../frontpage/start.html';
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="../start.html" class="logo">
+                <span>A</span>uthentiCodr<span class="dot">.</span>
+            </a>
+            <div class="header-actions">
+                <button class="add-account-btn" id="addAccountBtn">
+                    <i class="fas fa-plus"></i> Add Account
+                </button>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="section-title">Your Authenticator Accounts</h1>
+            
+            <!-- Accounts Container -->
+            <div class="accounts-container" id="accountsContainer">
+                <!-- Accounts will be dynamically added here -->
+            </div>
+            
+            <!-- Add Account Modal -->
+            <div class="add-account-modal" id="addAccountModal">
+                <div class="modal-content">
+                    <span class="close-modal" id="closeAccountModal">&times;</span>
+                    <h2>Add New Account</h2>
+                    <form id="addAccountForm">
+                        <div class="form-group">
+                            <label for="accountName">Account Name</label>
+                            <input type="text" id="accountName" placeholder="e.g., Personal Gmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="accountType">Account Type</label>
+                            <select id="accountType">
+                                <option value="google">Google</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="github">GitHub</option>
+                                <option value="amazon">Amazon</option>
+                                <option value="microsoft">Microsoft</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="secretKey">Secret Key</label>
+                            <input type="text" id="secretKey" placeholder="Enter your secret key" required>
+                            <p class="help-text">Get this from your account's 2FA setup page</p>
+                        </div>
+                        <button type="submit" class="btn primary">Add Account</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="security-info">
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Military-Grade Encryption</h3>
+                    <p>Your codes are protected with AES-256 encryption</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Secure Cloud Backup</h3>
+                    <p>Access your codes from any device</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 AuthentiCodr. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fas fa-shield-alt"></i> Security</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="accounts.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
