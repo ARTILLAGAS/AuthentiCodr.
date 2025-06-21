@@ -1,49 +1,43 @@
-// Timer for verification code
 document.addEventListener('DOMContentLoaded', () => {
     let timerInterval;
     const timerDisplay = document.getElementById('timerValue');
     const resendLink = document.getElementById('resendCode');
+    const codeModal = document.getElementById('codeVerificationModal');
     
     function startTimer(duration) {
-        let timer = duration, minutes, seconds;
+        let timeLeft = duration;
         clearInterval(timerInterval);
         
         timerInterval = setInterval(() => {
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
             
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
+            timerDisplay.textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
             
-            timerDisplay.textContent = minutes + ":" + seconds;
+            timeLeft--;
             
-            if (--timer < 0) {
+            if (timeLeft < 0) {
                 clearInterval(timerInterval);
-                timerDisplay.textContent = "00:00";
+                timerDisplay.textContent = '00:00';
                 resendLink.classList.remove('disabled');
             }
         }, 1000);
     }
     
-    // Start 3-minute timer when code modal opens
-    document.getElementById('codeVerificationModal').addEventListener('click', (e) => {
-        if (e.target === codeVerificationModal) {
+    codeModal.addEventListener('click', e => {
+        if (e.target === codeModal) {
             startTimer(180);
             resendLink.classList.add('disabled');
         }
     });
     
-    // Resend code functionality
-    resendLink.addEventListener('click', (e) => {
+    resendLink.addEventListener('click', e => {
         e.preventDefault();
-        
         if (resendLink.classList.contains('disabled')) return;
         
-        // Generate new code
         verificationCode = Math.floor(100000 + Math.random() * 900000);
         alert(`New verification code sent: ${verificationCode}`);
-        
-        // Restart timer
         startTimer(180);
         resendLink.classList.add('disabled');
     });

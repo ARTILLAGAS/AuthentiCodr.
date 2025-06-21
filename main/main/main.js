@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Check authentication status
     const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
     
     if (!isAuthenticated) {
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // Logout function
     const logoutBtn = document.getElementById('logoutBtn');
     
     function logout() {

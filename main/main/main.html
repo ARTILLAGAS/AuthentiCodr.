@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
-        // Authentication check
         if (localStorage.getItem('isAuthenticated') !== 'true') {
             window.location.href = '../frontpage/start.html';
         }
     </script>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container">
-            <a href="../start.html" class="logo">
+            <a class="logo">
                 <span>A</span>uthentiCodr<span class="dot">.</span>
             </a>
             <div class="header-actions">
@@ -32,17 +30,12 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="container">
             <h1 class="section-title">Your Authenticator Accounts</h1>
             
-            <!-- Accounts Container -->
-            <div class="accounts-container" id="accountsContainer">
-                <!-- Accounts will be dynamically added here -->
-            </div>
+            <div class="accounts-container" id="accountsContainer"></div>
             
-            <!-- Add Account Modal -->
             <div class="add-account-modal" id="addAccountModal">
                 <div class="modal-content">
                     <span class="close-modal" id="closeAccountModal">&times;</span>
@@ -88,7 +81,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
